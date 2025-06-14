@@ -1,6 +1,6 @@
 [<center><img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" height="50%" width="50%;" /></center>](https://github.com/DerpFest-LOS)
 
-DerpFest x Lineage
+DerpFest x Lineage GSI
 ------------------
 
 
