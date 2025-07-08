@@ -1,4 +1,9 @@
-[<center><img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" height="50%" width="50%;" /></center>](https://github.com/DerpFest-LOS)
+<div align="center">
+  <a href="https://github.com/DerpFest-LOS">
+    <img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" width="70%" />
+  </a>
+</div>
+
 
 DerpFest x Lineage GSI
 ------------------
@@ -34,6 +39,7 @@ repo sync -j48
 ---------------
 **clone all repo** 
 
+```bash
 git clone https://github.com/TrebleDroid/vendor_interfaces -b android-15.0 vendor/interfaces
 
 git clone https://github.com/TrebleDroid/device_phh_treble -b android-15.0 device/phh/treble
@@ -50,7 +56,8 @@ git clone https://android.googlesource.com/platform/prebuilts/vndk/v29 prebuilts
 
 git clone https://github.com/ponces/treble_adapter -b master treble_adapter
 
-git clone https://github.com/Doze-off/patches.git
+git clone https://github.com/Doze-off/patches.git -b patches-15 patches
+```
 
 ---------------
 Move the **apply-patches.sh** script inside the patches folder to the **main folder**
