@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/DerpFest-LOS">
-    <img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" width="70%" />
+    <img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" width="50%" />
   </a>
 </div>
 
