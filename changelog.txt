@@ -1,3 +1,5 @@
+**Clean flash necessary**
+
 Changelog:
 
     Sync latest source of DerpFest
