@@ -2,21 +2,14 @@
 Changelog:
 
     Sync latest source of DerpFest
-    DerpFestCustomizations: Add switch for small notifications
-    DerpFestCustomizations: Kill play store too when applying new PIF
-    DerpFestCustomizations: MonetSettings: Manually set default values to preferences
-    DerpFestCustomizations: Add Pulse Ambient Edge Light and Visualizer categories
-    DerpFestCustomizations: Add ongoing chip and island notifications categories
-    DerpFestCustomizations: Organize preferences into general categories for lockscreen and notifications
-    DerpFestCustomizations: Introduce Bluetooth Tile behavior options
-    DerpFestCustomizations: Allow to change brightness slider positioning in new compose QS
-    DerpFestCustomizations: Add auto brightness toggle option in QS settings
-    More tweaks
-    Fingerprint fix on some devices
-    patch incoming call (but depend you devices )
-    patch sms for samsung devices ( but depend you device )
+    DerpFestCustomizations: Add edit button option in QS settings
+    DerpFestCustomizations: Fix keybox and PIF data handling with timestamps
+    DerpFestCustomizations: Add settings icon and power menu icon options in QS footer
+    DerpFestCustomizations: Allow hiding QS footer data usage
+    DerpFestCustomizations: Introduce tile shape mode options in QS settings
+    DerpFestCustomizations: Add tile squishing animation option in QS settings
 
 Note
 
-    circle to search works depending on your device as the feature has not been fully implemented
     If you use magisk, you may lose when using OTA, if you do not have dynamic partitions you may get bootloop, OTA will not work for some devices, if you update and get bootloop, do not use OTA anymore (you have been warned)
+    DSU sideloader stops working when you use OTA, but you can fix this by flashing directly from FastBoot or TWRP and deleting OTA updates from the 3 dots at the top of the updates tab.
