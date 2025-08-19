@@ -1,24 +1,24 @@
 {
-  "version": "2025-08-13",
-  "date": "1755091781",
+  "version": "2025-08-19",
+  "date": "1755578034",
   "gsi": "Derpfest Official | by Doze-off",
   "security_patch": "2025-08-05",
   "changelog": "https://raw.githubusercontent.com/Doze-off/Derpfest_treble/16.0/changelog.txt",
   "variants": [
     {
       "name": "derpfest_gsi_gapps",
-      "size": "1189316300",
-      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-13/Derpfest-16_GSI_treble_arm64-ab_GAPPS-Official-20250813.img.xz"
+      "size": "1214535468",
+      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-19/Derpfest-16_GSI_treble_arm64-ab_GAPPS-Official-20250819.img.xz"
     },
     {
       "name": "derpfest_gsi_vanilla",
-      "size": "1018093900",
-      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-13/Derpfest-16_GSI_treble_arm64-ab_VANILLA-Official-20250813.img.xz"
+      "size": "1040996272",
+      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-19/Derpfest-16_GSI_treble_arm64-ab_VANILLA-Official-20250819.img.xz"
     },
     {
       "name": "derpfest_a64_vanilla",
-      "size": "817091028",
-      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-13/Derpfest-16_GSI_treble_arm32_binder64-ab_VANILLA-Official-20250813.img.xz"
+      "size": "830690696",
+      "url": "https://github.com/Doze-off/Derpfest_treble/releases/download/2025-08-19/Derpfest-16_GSI_treble_arm32_binder64-ab_VANILLA-Official-20250819.img.xz"
     }
   ]
 }
