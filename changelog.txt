@@ -2,14 +2,18 @@
 Changelog:
 
     Sync latest source of DerpFest
-    DerpFestCustomizations: Add edit button option in QS settings
-    DerpFestCustomizations: Fix keybox and PIF data handling with timestamps
-    DerpFestCustomizations: Add settings icon and power menu icon options in QS footer
-    DerpFestCustomizations: Allow hiding QS footer data usage
-    DerpFestCustomizations: Introduce tile shape mode options in QS settings
-    DerpFestCustomizations: Add tile squishing animation option in QS settings
+    basic integrity by default, to have strong, just find a keybox even if it is revoked and a more recent pif.json and you will have strong | import in settings -> derpfest customizations -> miscellaneous | pif and keybox download here
+    Circle to search by default
+    Several overlays fixed again
+    Fixed hide app in Derpfest launcher
+    Jemalloc added for better performance and memory management
+    slightly more aggressive LMK
+    fixed blur variants
+    three new options added to the Treble app, which can improve performance. These can be found in Treble app -> Display.
 
 Note
 
+    For some users, circle to search will work by default, for others, you will need to disable securize in the treble app under misc -> securize
+    If you have a broken tree, don't blame me if you don't pass strong, if you disable securize you lose the strong with the method I mentioned
     If you use magisk, you may lose when using OTA, if you do not have dynamic partitions you may get bootloop, OTA will not work for some devices, if you update and get bootloop, do not use OTA anymore (you have been warned)
     DSU sideloader stops working when you use OTA, but you can fix this by flashing directly from FastBoot or TWRP and deleting OTA updates from the 3 dots at the top of the updates tab.
