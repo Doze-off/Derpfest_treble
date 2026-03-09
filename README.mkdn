@@ -1,3 +1,6 @@
+![GitHub Stars](https://img.shields.io/github/stars/Doze-off/Derpfest_treble?style=social)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+
 <div align="center">
   <a href="https://github.com/DerpFest-LOS">
     <img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" width="50%" />
