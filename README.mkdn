@@ -32,34 +32,40 @@ cd derp
 **To initialize your local repository using the AOSP/CAF based DerpFest source, use a command like this:**
 
 ```bash
-repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
+repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
 ```
 **Sync up with this command:**
 ```bash
-repo sync -j48
+repo sync -j192
 ```
 
 ---------------
 **clone all repo** 
 
 ```bash
+git clone https://github.com/Doze-off/treble_app -b master treble_app
+
 git clone https://github.com/TrebleDroid/vendor_interfaces -b android-15.0 vendor/interfaces
 
-git clone https://github.com/TrebleDroid/device_phh_treble -b android-15.0 device/phh/treble
-
-git clone https://github.com/TrebleDroid/treble_app -b master treble_app
+git clone https://github.com/Doze-off/device_phh_treble -b android-16 device/phh/treble
 
 git clone https://github.com/AndyCGYan/android_packages_apps_QcRilAm -b master packages/apps/QcRilAm
 
-git clone https://github.com/TrebleDroid/vendor_hardware_overlay -b pie vendor/hardware_overlay
+git clone https://android.googlesource.com/platform/prebuilts/vndk/v28 prebuilts/vndk/v28
 
-git clone https://android.googlesource.com/platform/prebuilts/vndk/v28  prebuilts/vndk/v28
-
-git clone https://android.googlesource.com/platform/prebuilts/vndk/v29 prebuilts/vndk/v29
+git clone https://github.com/TrebleDroid/platform_prebuilts_vndk_v29 prebuilts/vndk/v29
 
 git clone https://github.com/ponces/treble_adapter -b master treble_adapter
 
-git clone https://github.com/Doze-off/patches.git -b patches-15 patches
+git clone https://github.com/Doze-off/vendor_hardware_overlay -b pie vendor/hardware_overlay
+
+git clone https://github.com/phhusson/vendor_vndk-tests.git -b master vendor/vndk-tests
+
+git clone https://github.com/phhusson/vendor_lptools.git -b master vendor/lptools
+
+git clone https://github.com/phhusson/vendor_magisk.git -b android-10.0 vendor/magisk
+
+git clone https://github.com/Doze-off/patches.git -b patches-16 patches
 ```
 
 ---------------
@@ -78,8 +84,8 @@ Move the files **AndroidProducts.mk, derp.mk, derpfest_gsi.mk** to folder, **dev
 **Compilation: Follow the commands**
 ```bash
 source build/envsetup.sh
-lunch derpfest_gsi-bp1a-userdebug
-make systemimage -j48
+lunch derpfest_gsi-bp2a-userdebug
+m systemimage -j192
 ```
 **Compress:**
 ```bash
