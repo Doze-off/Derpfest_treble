@@ -1,97 +1,88 @@
-![GitHub Stars](https://img.shields.io/github/stars/Doze-off/Derpfest_treble?style=social)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-
 <div align="center">
-  <a href="https://github.com/DerpFest-LOS">
-    <img src="https://raw.github.com/DerpFest-LOS/android_manifest/15.2/derpfest.png" width="50%" />
+  <a href="https://github.com/ProjectInfinity-X">
+    <img src="https://camo.githubusercontent.com/01131e779c2c6a401a09398114694084dbe03038f4c01fbb29a9551f86a80b2d/68747470733a2f2f7261772e6769746875622e636f6d2f44657270466573742d4c4f532f616e64726f69645f6d616e69666573742f31352e322f64657270666573742e706e67" width="70%" />
   </a>
 </div>
 
 
-DerpFest GSI Official
+Derpfest GSI Treble
 ------------------
 
+This is a GSI trebledroid with patches for specific devices, BPF bypass, firewall bypass, and much more.
 
-Getting Started
----------------
+------------------
 
+Create an overlay for your device to increase compatibility with GSI.
 
-You'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
+build_overlay:
 
+Manual method: 
+For creating an overlay, follow this guide: How to create an overlay https://github.com/TrebleDroid/treble_experimentations/wiki/How-to-create-an-overlay%3F?
+Before submitting your overlay to the repository, make a correction using the #fix_overlay note in support group.
 
+Semi-automatic tool: 
+Required Linux pc or Termux, automatically creates flashable module: https://github.com/uzbforce/treble-rro-creator
 
-Building the GSI
----------------
+Submit your overlay to this repository: https://github.com/Doze-off/vendor_hardware_overlay
 
-**Create the directory**
-```bash
-mkdir derp
-cd derp
-```
+---
 
-**To initialize your local repository using the AOSP/CAF based DerpFest source, use a command like this:**
+Verify Overlay Status
 
-```bash
-repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16.2 --git-lfs
-```
-**Sync up with this command:**
-```bash
-repo sync -j192
-```
+PC:
+adb shell cmd overlay list --user current
 
----------------
-**clone all repo** 
+Termux:
+su
+cmd overlay list --user current
 
-```bash
-git clone https://github.com/Doze-off/treble_app -b master treble_app
+You should see something like:
+android
+[x]
+me.phh.treble.overlay.hotwav.w10pro
 
-git clone https://github.com/Doze-off/vendor_interfaces -b android-16.0 vendor/interfaces
+------------------
 
-git clone https://github.com/Doze-off/device_phh_treble -b android-16.2 device/phh/treble
+How to flash ?
 
-git clone https://github.com/AndyCGYan/android_packages_apps_QcRilAm -b master packages/apps/QcRilAm
+🚨Test first in dsu sideloader use [DSU Sideloader](https://github.com/VegaBobo/DSU-Sideloader)
 
-git clone https://android.googlesource.com/platform/prebuilts/vndk/v30 prebuilts/vndk/v30
+There is no universal installation method, as each device has some different commands, but the one that works best is this one 
 
-git clone https://android.googlesource.com/platform/prebuilts/vndk/v28 prebuilts/vndk/v28
+You can get vbmeta from the stock rom or from google
 
-git clone https://github.com/TrebleDroid/platform_prebuilts_vndk_v29 prebuilts/vndk/v29
+🟢 Clean Flash (GSI):
 
-git clone https://github.com/ponces/treble_adapter -b master treble_adapter
+fastboot devices 
 
-git clone https://github.com/Doze-off/vendor_hardware_overlay -b pie vendor/hardware_overlay
+fastboot --disable-verification flash vbmeta vbmeta.img 
 
-git clone https://github.com/phhusson/vendor_magisk.git -b android-10.0 vendor/magisk
+fastboot --disable-verity --disable-verification flash vbmeta_system vbmeta_system.img 
 
-git clone https://github.com/Doze-off/patches.git -b patches-16.1 patches
+fastboot reboot fastboot 
 
-git clone https://github.com/phhusson/vendor_lptools.git -b master vendor/lptools
-```
+fastboot erase system 
 
----------------
-Move the **apply-patches.sh** script inside the patches folder to the **main folder**
+fastboot flash system system.img 
 
-**Use the command:**
-```bash
-bash apply-patches.sh ~/derp
-```
-**Note:** if some patches fail, you have to apply them manually
+fastboot reboot recovery 
+→ Clear data/cache
+→ Factory reset
 
+⚠️ Error: "out of space" when flashing, use: 
+fastboot delete-logical-partition product 
 
----------------
-Move the files **AndroidProducts.mk, derp.mk, derpfest_gsi.mk** to folder, **device/phh/treble**
+❗️If the error persists, use:
+fastboot delete-logical-partition system 
+fastboot create-logical-partition system 0 
 
-**Compilation: Follow the commands**
-```bash
-source build/envsetup.sh
-lunch derpfest_gsi-bp1a-userdebug
-make systemimage -j48
-```
-**Compress:**
-```bash
-xz -9 -T0 -v -z out/target/product/tdgsi_arm64_ab/system.img
-```
+🔴 Dirty Flash: 
+fastboot flash system system.img
 
-**Finish**
+------------------
 
+### Support Group: [DozeOff GSI Treble](https://t.me/dozeoff_treble)
 
+Big thanks for @TrebleDroid for some
+
+patches
